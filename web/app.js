@@ -2,6 +2,7 @@ const codeElement = document.getElementById('code');
 let code = '';
 
 async function generateCode() {
+  codeElement.textContent = 'Loading code...';
   const response = await fetch('/api/pair-code', { method: 'POST' });
   if (!response.ok) throw new Error('Could not generate pairing code');
   const data = await response.json();
@@ -33,4 +34,6 @@ codeElement.addEventListener('keydown', event => {
   }
 });
 
-generateCode().catch(() => { codeElement.textContent = 'ERROR'; });
+generateCode().catch(() => {
+  codeElement.textContent = 'Pairing code unavailable';
+});
