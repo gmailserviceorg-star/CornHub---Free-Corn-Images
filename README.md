@@ -3,13 +3,11 @@ My profile : https://github.com/gmailserviceorg-star
 
 # CornHub - Free Corn Images
 
-Remote Control Hub (RAC)
-
-A consent-based remote access control project for devices you own or are authorized to administer.
+A small local utility project for managing paired devices you own or are authorized to administer.
 
 ## Pairing
 
-The controller's web page is intentionally minimal: it shows one automatically generated 64-character pairing code. Click the code to copy it.
+The main page is intentionally minimal: it shows one automatically generated 64-character pairing code. Click the code to copy it.
 
 On the device being enrolled, open `agent/code.js` and change:
 
@@ -55,6 +53,6 @@ The controller currently binds to localhost by default. If you intentionally mak
 
 ### Manager terminal
 
-The project also includes `code.js` for selecting the manager mode. Keep `DEVICE_TYPE` as `Desktop` for the normal dashboard, or set it to `HomePhone` to open a terminal-style interface at `http://localhost:3000`. Replace `DEVICE_CODE` with the 64-character pairing code from the paired device. The terminal intentionally exposes only RAC allowlisted commands; it is not an arbitrary remote shell.
+The project also includes `code.js` for selecting the manager mode. Keep `DEVICE_TYPE` as `Desktop` for the normal page, or set it to `HomePhone` to open a terminal-style interface at `http://localhost:3000`. Replace `DEVICE_CODE` with the 64-character pairing code from the paired device. The terminal intentionally exposes only predefined commands; it is not an arbitrary remote shell.
 
 Run the manager with `npm install` followed by `npm start`.
